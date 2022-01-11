@@ -32,7 +32,9 @@ exports.register = async (req,res,next) => {
         password: req.body.password
     })
     var response = await user.save();
-    res.send(response);
+   res.json({
+        status:'ok',
+    })
 }
 
 
